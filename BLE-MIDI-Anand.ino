@@ -8,11 +8,11 @@ int ButtonValue4 = 0;
 int ButtonValue5 = 0;
 
 //button input pin in ESP32 (define more int button2,3,4... ect for multiple inputs)
-int button1 = 13; //Note 1
-int button2 = 12; //Note 2
-int button3 = 14; //Note 3
-int button4 = 27; //Note 4
-int button5 = 26; //Note 5
+int button1 = 13; //Note 1 - MIDI note 69 "A2"
+int button2 = 12; //Note 2 - MIDI note 70 "A#2"
+int button3 = 14; //Note 3 - MIDI note 71 "B2"
+int button4 = 27; //Note 4 - MIDI note 72 "C2"
+int button5 = 26; //Note 5 - MIDI note 73 "C#2"
 
 
 
@@ -44,11 +44,11 @@ bool buttonAvalueNew = digitalRead(button1);
 if (buttonAvalueNew != buttonAvalueOld){
       if (buttonAvalueNew == HIGH){
       BLEMidiServer.noteOn(0, 69, 127);
-      //Serial.println("Note On");
+      //Serial.println("Note 1 On");
       }
       else {
       BLEMidiServer.noteOff(0, 69, 127);
-      //Serial.println("Note Off");
+      //Serial.println("Note 1 Off");
       }
       buttonAvalueOld = buttonAvalueNew;
 }
@@ -61,12 +61,66 @@ bool buttonBvalueNew = digitalRead(button2);
 if (buttonBvalueNew != buttonBvalueOld){
       if (buttonBvalueNew == HIGH){
       BLEMidiServer.noteOn(0, 70, 127);
-      //Serial.println("Note On");
+      //Serial.println("Note 2 On");
       }
       else {
       BLEMidiServer.noteOff(0, 70, 127);
-      //Serial.println("Note Off");
+      //Serial.println("Note 2 Off");
       }
       buttonBvalueOld = buttonBvalueNew;
+}
+
+
+static bool buttonCvalueOld = LOW;
+
+bool buttonCvalueNew = digitalRead(button3);
+
+if (buttonCvalueNew != buttonCvalueOld){
+      if (buttonCvalueNew == HIGH){
+      BLEMidiServer.noteOn(0, 71, 127);
+      //Serial.println("Note 3 On");
+      }
+      else {
+      BLEMidiServer.noteOff(0, 71, 127);
+      //Serial.println("Note 3 Off");
+      }
+      buttonCvalueOld = buttonCvalueNew;
+}
+
+static bool buttonDvalueOld = LOW;
+
+bool buttonDvalueNew = digitalRead(button4);
+
+if (buttonDvalueNew != buttonDvalueOld){
+      if (buttonDvalueNew == HIGH){
+      BLEMidiServer.noteOn(0, 72, 127);
+      //Serial.println("Note 4 On");
+      }
+      else {
+      BLEMidiServer.noteOff(0, 73, 127);
+      //Serial.println("Note 4 Off");
+      }
+      buttonDvalueOld = buttonDvalueNew;
+}
+
+
+static bool buttonEvalueOld = LOW;
+
+bool buttonEvalueNew = digitalRead(button4);
+
+if (buttonEvalueNew != buttonEvalueOld){
+      if (buttonEvalueNew == HIGH){
+      BLEMidiServer.noteOn(0, 73, 127);
+      //Serial.println("Note 5 On");
+      }
+      else {
+      BLEMidiServer.noteOff(0, 73, 127);
+      //Serial.println("Note 5 Off");
+      }
+      buttonEvalueOld = buttonEvalueNew;
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 }
 }
