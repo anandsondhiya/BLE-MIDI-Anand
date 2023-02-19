@@ -23,6 +23,8 @@ int button7 = 2;
 int button8 = 4;
 
 
+// int digiout = 34; // Digital Output
+
 
 void setup() {
   Serial.begin(115200);
@@ -38,10 +40,15 @@ void setup() {
   pinMode(button6,INPUT_PULLUP);
   pinMode(button7,INPUT_PULLUP);
   pinMode(button8,INPUT_PULLUP);
+
+  pinMode(34, OUTPUT);
+  
 }
 
 void loop() {
 
+  digitalWrite(34, HIGH);
+  
   ButtonValue1 = digitalRead(button1);
   ButtonValue2 = digitalRead(button2);
   ButtonValue3 = digitalRead(button3);
