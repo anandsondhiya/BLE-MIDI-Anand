@@ -8,23 +8,17 @@ int ButtonValue4 = 0;
 int ButtonValue5 = 0;
 int ButtonValue6 = 0;
 int ButtonValue7 = 0;
-int ButtonValue8 = 0;
 
 
 
 //button input pin in ESP32 (define more int button2,3,4... ect for multiple inputs)
-int button1 = 13; //Note 1 - MIDI note 69 "A2"
-int button2 = 12; //Note 2 - MIDI note 70 "A#2"
-int button3 = 14; //Note 3 - MIDI note 71 "B2"
-int button4 = 27; //Note 4 - MIDI note 72 "C2"
-int button5 = 26; //Note 5 - MIDI note 73 "C#2"
-int button6 = 15;
-int button7 = 2;
-int button8 = 4;
-
-
-// int digiout = 34; // Digital Output
-
+int button1 = 15; //Note 1 - MIDI note 69 "A2"
+int button2 = 2; //Note 2 - MIDI note 70 "A#2"
+int button3 = 4; //Note 3 - MIDI note 71 "B2"
+int button4 = 13; //Note 4 - MIDI note 72 "C2"
+int button5 = 12; //Note 5 - MIDI note 73 "C#2"
+int button6 = 14;
+int button7 = 27;
 
 void setup() {
   Serial.begin(115200);
@@ -39,16 +33,13 @@ void setup() {
   pinMode(button5,INPUT_PULLUP);
   pinMode(button6,INPUT_PULLUP);
   pinMode(button7,INPUT_PULLUP);
-  pinMode(button8,INPUT_PULLUP);
 
-  pinMode(34, OUTPUT);
   
 }
 
 void loop() {
 
-  digitalWrite(34, HIGH);
-  
+ 
   ButtonValue1 = digitalRead(button1);
   ButtonValue2 = digitalRead(button2);
   ButtonValue3 = digitalRead(button3);
@@ -56,7 +47,6 @@ void loop() {
   ButtonValue5 = digitalRead(button5);
   ButtonValue6 = digitalRead(button6);
   ButtonValue7 = digitalRead(button7);
-  ButtonValue8 = digitalRead(button8);
 
 static bool buttonAvalueOld = LOW;
 
