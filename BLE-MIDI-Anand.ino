@@ -62,7 +62,7 @@ if (buttonAvalueNew != buttonAvalueOld){
 //      Serial.println("Note 1 Off");
       }
       buttonAvalueOld = buttonAvalueNew;
-      delay(10);
+//      delay(10);
 }
   
 
@@ -80,7 +80,7 @@ if (buttonBvalueNew != buttonBvalueOld){
       //Serial.println("Note 2 Off");
       }
       buttonBvalueOld = buttonBvalueNew;
-      delay(10);
+//      delay(10);
 }
 
 
@@ -98,7 +98,7 @@ if (buttonCvalueNew != buttonCvalueOld){
       //Serial.println("Note 3 Off");
       }
       buttonCvalueOld = buttonCvalueNew;
-      delay(10);
+//      delay(10);
 }
 
 static bool buttonDvalueOld = HIGH;
@@ -115,7 +115,7 @@ if (buttonDvalueNew != buttonDvalueOld){
       //Serial.println("Note 4 Off");
       }
       buttonDvalueOld = buttonDvalueNew;
-      delay(10);
+//      delay(10);
 }
 
 
@@ -133,7 +133,7 @@ if (buttonEvalueNew != buttonEvalueOld){
       //Serial.println("Note 5 Off");
       }
       buttonEvalueOld = buttonEvalueNew;
-      delay(10);
+//      delay(10);
 }
 
 static bool buttonFvalueOld = HIGH;
@@ -150,7 +150,7 @@ if (buttonFvalueNew != buttonFvalueOld){
       //Serial.println("Note 5 Off");
       }
       buttonFvalueOld = buttonFvalueNew;
-      delay(10);
+//      delay(10);
 }
 
 
